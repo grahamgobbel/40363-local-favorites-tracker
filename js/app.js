@@ -217,10 +217,34 @@ function addFavorite(event) {
     displayFavorites();
 
     console.log('Favorite added successfully!');
+
+// Function to clear all favorites
+function clearAllFavorites() {
+    const confirmClear = confirm('Are you sure you want to delete ALL favorites? This cannot be undone!');
+
+    if (confirmClear) {
+        favorites = [];
+        console.log('All favorites cleared');
+
+        localStorage.removeItem('localFavorites');
+        console.log('localStorage cleared');
+
+        displayFavorites();
+        alert('All favorites have been deleted.');
+    } else {
+        console.log('Clear all cancelled by user');
+    }
+}
+
 // Connect event listeners
 form.addEventListener('submit', addFavorite);
 searchInput.addEventListener('input', searchFavorites);
 categoryFilter.addEventListener('change', searchFavorites);
+
+const clearAllBtn = document.getElementById('clear-all-btn');
+if (clearAllBtn) {
+    clearAllBtn.addEventListener('click', clearAllFavorites);
+}
 
 console.log('Event listeners attached - app is ready!');
 
