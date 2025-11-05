@@ -46,7 +46,7 @@ body {
 
 /* TODO LAB11: Add header, h1, and .subtitle styles */
 header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #e7ddde 0%, #ff72a8 100%);
     color: white;
     padding: 2rem 0;
     text-align: center;
@@ -82,7 +82,7 @@ section {
 }
 
 h2 {
-    color: #667eea;
+    color: #eeb8d6;
     margin-bottom: 1.5rem;
     font-size: 1.8rem;
 }
@@ -121,7 +121,7 @@ input[type="text"]:focus,
 select:focus,
 textarea:focus {
     outline: none;
-    border-color: #667eea;
+    border-color: #4a1048;
     box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
 }
 
@@ -149,12 +149,12 @@ textarea {
 }
 
 .btn-primary {
-    background-color: #667eea;
+    background-color: #fd0aac;
     color: white;
 }
 
 .btn-primary:hover {
-    background-color: #5568d3;
+    background-color: #fcd2ed;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
 }
@@ -163,12 +163,12 @@ textarea {
     transform: translateY(0);
 }
 .btn-danger {
-    background-color: #dc3545;
+    background-color: #600748;
     color: white;
 }
 
 .btn-danger:hover {
-    background-color: #c82333;
+    background-color: #600748;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(220, 53, 69, 0.4);
 }
@@ -233,7 +233,7 @@ textarea {
 }
 
 .favorite-card:hover {
-    border-color: #667eea;
+    border-color: #ea66b1;
     box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
     transform: translateY(-5px);
 }
@@ -247,7 +247,7 @@ textarea {
 .favorite-category {
     display: inline-block;
     padding: 0.25rem 0.75rem;
-    background-color: #667eea;
+    background-color: #ea66b1;
     color: white;
     border-radius: 20px;
     font-size: 0.85rem;
@@ -345,12 +345,3 @@ footer p {
     }
 }
 
-// Connect search input to searchFavorites function
-const searchInput = document.getElementById('search-input');
-searchInput.addEventListener('input', searchFavorites);
-
-// Connect category filter to searchFavorites function
-const categoryFilter = document.getElementById('category-filter');
-categoryFilter.addEventListener('change', searchFavorites);
-
-console.log('Search and filter event listeners attached!'); 
